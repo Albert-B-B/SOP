@@ -1,0 +1,96 @@
+\documentclass{amsart}
+\usepackage[danish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{enumitem}
+\usepackage{todonotes}
+
+\usepackage{stmaryrd} % til modstridslyn - mest for sjov skyld
+
+%tikz - kan bruges til at lave tegninger. Hvis I aldrig har hørt, saa bare ignorer det. I faar nok ikke brug for det. 
+\usepackage{tikz}
+\usepackage{pgf,tikz}
+\usepackage{tikz-cd}
+\usetikzlibrary{cd}
+\usepackage{mathrsfs}
+\usetikzlibrary{arrows}
+\usepackage{bm}
+
+%phi og epsilon - sørger for pæne phi'er og epsilon'er
+\let\oldepsilon\epsilon
+\let\epsilon\varepsilon
+\let\varepsilon\epsilon
+\let\eps\epsilon
+
+\let\oldphi\phi
+\let\phi\varphi
+\let\varphi\phi
+
+%normer
+\DeclarePairedDelimiter{\abs}{\lvert}{\rvert} %Hvis man gerne vil skrive absolutværdien af x, skriver man \abs{x}.
+\DeclarePairedDelimiter{\norm}{\lVert}{\rVert} %Hvis man gerne vil skrive normen af x, skriver man \norm{x}.
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
+
+%vigtige mængder
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Qx}{\mathbb{Q}^{\times}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Cx}{\mathbb{C}^{\times}}
+\newcommand{\F}{\mathbb{F}}
+
+%referer i matematik
+\newcommand{\ved}[2]{\overset{\text{\ref{#1}}}{#2}}
+%grim løsning til et problem
+\newcounter{bodge}
+\setcounter{bodge}{5}
+
+%linalg
+\newcommand{\spn}{\operatorname{span}}
+%fed skrift i matematik-mode laves ved \bm{...}
+
+%saetninger
+\theoremstyle{definition}
+\newtheorem{defi}{Definition}[section]
+\theoremstyle{plain}
+\newtheorem{setn}[defi]{Sætning}
+\newtheorem{kor}[defi]{Korollar}
+\newtheorem{prop}[defi]{Proposition}
+\newtheorem{lem}[defi]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem*{lem*}{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{eks}[defi]{Eksempel}
+\newtheorem{bemrk}[defi]{Bemærkning}
+
+\newtheorem*{bemrk*}{Bemærkning}
+
+%opgavemiljø
+\newtheorem{opg}[defi]{Opgave}
+%spørgsmål
+\newtheorem{spg}[defi]{Spørgsmål}
+
+\title{Her er en titel}
+\author{Albert B. Bunkenborg}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\section*{!TEMP! multi }
+Vi kender allerede til funktioner i én variable fra undervisningen i gymnasiet. For at kunne beskrive varmespredning er vi nødt til at have noget viden omkring multivariable funktioner. 
+\end{document}
